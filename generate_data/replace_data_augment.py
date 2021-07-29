@@ -4,11 +4,12 @@ import random
 import copy
 
 
-# file path
+# input file path
 train_slot_file = "./data/slot/train.json"
 
-aug_sen_file = "./data/aug_sen.txt"
-aug_train_slot_file = "./data/slot/train_aug.json"
+# output file path
+aug_sen_file = "./data/aug_sen_v2.txt"
+aug_train_slot_file = "./data/slot/train_aug_v2.json"
 
 
 # load data/slot/*.json file 
@@ -22,9 +23,9 @@ dishnames = []
 for sen in train_slot:
     for index in range(len(sen['tags'])):
         if sen['tags'][index] == "ingredient":
-            ingredients.append(sen['tokens'][index])
+            ingredients.append(sen['tokens'][index].strip('.'))
         elif sen['tags'][index] == "dishname":
-            dishnames.append(sen['tokens'][index])
+            dishnames.append(sen['tokens'][index].strip('.'))
 
 print("Ingredient list: {}".format(ingredients))
 print("Dishname list: {}".format(dishnames))
@@ -34,30 +35,35 @@ ori_ingredient = ""
 aug_train_slot = []
 
 for sen in train_slot:
-    aug_sens.append(' '.join(sen['tokens']))
+    # print(sen) # {'tokens': ['Help', 'me', 'cook', 'something', 'with', 'strawberries'], 'tags': ['O', 'O', 'O', 'O', 'O', 'ingredient'], 'id': 'train-0'}
+    # aug_sens.append(' '.join(sen['tokens']))
+    # print(aug_sens) # ['Help me cook something with strawberries']
     copy_sen = copy.deepcopy(sen)
+    aug_sens.append(' '.join(copy_sen['tokens']))
     aug_train_slot.append(copy_sen)
-    for index in range(len(sen['tags'])):
-        if sen['tags'][index] == "ingredient":
-            ori_ingredient = sen['tokens'][index]
-            # print("ori_ingredient = {}".format(ori_ingredient))
-            for ingredient in ingredients:
-                if ingredient != ori_ingredient:
-                    sen['tokens'][index] = ingredient
-                    aug_sens.append(' '.join(sen['tokens']))
-                    copy_sen = copy.deepcopy(sen)
-                    aug_train_slot.append(copy_sen)
 
-        elif sen['tags'][index] == "dishname":
+    for index in range(len(sen['tags'])):
+        if sen['tags'][index] == "dishname":
             ori_dishname = sen['tokens'][index]
-            # print("ori_dishname = {}".format(ori_dishname))
             for dishname in dishnames:
                 if dishname != ori_dishname:
-                    sen['tokens'][index] = dishname
-                    aug_sens.append(' '.join(sen['tokens']))
+                    # sen['tokens'][index] = dishname
+                    # aug_sens.append(' '.join(sen['tokens']))
                     copy_sen = copy.deepcopy(sen)
+                    copy_sen['tokens'][index] = dishname
+                    aug_sens.append(' '.join(copy_sen['tokens']))
                     aug_train_slot.append(copy_sen)
 
+        elif sen['tags'][index] == "ingredient":
+            ori_ingredient = sen['tokens'][index]
+            for ingredient in ingredients:
+                if ingredient != ori_ingredient:
+                    # sen['tokens'][index] = ingredient
+                    # aug_sens.append(' '.join(sen['tokens']))
+                    copy_sen = copy.deepcopy(sen)
+                    copy_sen['tokens'][index] = ingredient
+                    aug_sens.append(' '.join(copy_sen['tokens']))
+                    aug_train_slot.append(copy_sen)
 
         
 
@@ -70,37 +76,6 @@ with open(aug_sen_file, 'w') as f:
 for idx, aug_train in enumerate(aug_train_slot):
     id_value = "train-{}".format(idx)
     aug_train['id'] = id_value
-
-
-
 # save augment train slot json
 with open(aug_train_slot_file, 'w') as f:
     json.dump(aug_train_slot, f, indent=2)
-
-# with open(train_save_file, 'w') as f:
-#     json.dump(train_schema, f, indent=2)
-
-
-    
-
-
-    
-
-
-# sents = []
-# for sample in train_slot:
-#     tokens = ""
-#     for idx, token in enumerate(sample['tokens']):
-#         if idx != len(sample['tokens'])-1:
-#             tokens+=token+" "
-#         else:
-#             tokens+=token
-#     sents.append(tokens)
-#     # print(tokens)
-
-# with open(train_aug_file, 'w') as f:
-#     for idx, sent in enumerate(sents):
-#         if idx%2==0:
-#             f.write('0\t'+sent+'\n')
-#         else:
-#             f.write('1\t'+sent+'\n')
