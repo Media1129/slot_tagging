@@ -1,0 +1,20 @@
+Thai cuisine is what I want to cook today
+ground truth: dishname dishname O O O O O O O
+test-0,O O O O O O O O O
+
+Do I need any ingredients for cheesecake?
+ground truth: O O O O O O dishname
+test-1,O O O O O O dishname
+
+I want to make juice. Can you please teach me?
+ground truth: O O O O dishname O O O O O
+test-2,O O O O dishname dishname O O dishname O
+
+Teach me how to make aci bowl
+ground truth: O O O O O dishname dishname
+test-3,O O O O O dishname dishname
+
+I want to make spicy spaghetti
+ground truth: O O O O dishname dishname
+test-4,O O O O dishname dishname
+

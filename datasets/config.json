@@ -1,0 +1,7 @@
+{
+    "train": "./data/slot/train_aug.json",
+    "valid": "./data/slot/dev.json",
+    "test": "./data/slot/test.json",
+    "max_text_len": 30,
+    "lower_case": true
+}

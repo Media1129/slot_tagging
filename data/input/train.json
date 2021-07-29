@@ -1,0 +1,518 @@
+[
+  {
+    "tokens": [
+      "Help",
+      "me",
+      "cook",
+      "something",
+      "with",
+      "strawberries"
+    ],
+    "tags": [
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O"
+    ],
+    "id": "train-0"
+  },
+  {
+    "tokens": [
+      "I",
+      "am",
+      "going",
+      "on",
+      "a",
+      "diet.",
+      "Can",
+      "you",
+      "suggest",
+      "cake",
+      "recipe",
+      "for",
+      "me?"
+    ],
+    "tags": [
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O"
+    ],
+    "id": "train-1"
+  },
+  {
+    "tokens": [
+      "Show",
+      "me",
+      "the",
+      "recipes",
+      "of",
+      "cakes",
+      "without",
+      "chocolate"
+    ],
+    "tags": [
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O"
+    ],
+    "id": "train-2"
+  },
+  {
+    "tokens": [
+      "Seach",
+      "the",
+      "brownie",
+      "recipe",
+      "for",
+      "me",
+      "please."
+    ],
+    "tags": [
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O"
+    ],
+    "id": "train-3"
+  },
+  {
+    "tokens": [
+      "I",
+      "am",
+      "looking",
+      "for",
+      "a",
+      "recipe",
+      "for",
+      "tiramisu"
+    ],
+    "tags": [
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O"
+    ],
+    "id": "train-4"
+  },
+  {
+    "tokens": [
+      "show",
+      "me",
+      "some",
+      "recipe",
+      "ideas!"
+    ],
+    "tags": [
+      "O",
+      "O",
+      "O",
+      "O",
+      "O"
+    ],
+    "id": "train-5"
+  },
+  {
+    "tokens": [
+      "Can",
+      "I",
+      "make",
+      "a",
+      "meal",
+      "for",
+      "my",
+      "dog?"
+    ],
+    "tags": [
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O"
+    ],
+    "id": "train-6"
+  },
+  {
+    "tokens": [
+      "I",
+      "have",
+      "some",
+      "beef",
+      "shank.",
+      "Help",
+      "me",
+      "to",
+      "cook",
+      "braised",
+      "beef."
+    ],
+    "tags": [
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O"
+    ],
+    "id": "train-7"
+  },
+  {
+    "tokens": [
+      "Is",
+      "there",
+      "any",
+      "easy-to-make",
+      "weight",
+      "loss",
+      "meal"
+    ],
+    "tags": [
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O"
+    ],
+    "id": "train-8"
+  },
+  {
+    "tokens": [
+      "Help",
+      "me",
+      "to",
+      "cook",
+      "a",
+      "medium",
+      "rare",
+      "steak."
+    ],
+    "tags": [
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O"
+    ],
+    "id": "train-9"
+  },
+  {
+    "tokens": [
+      "Do",
+      "you",
+      "have",
+      "any",
+      "recommended",
+      "cheap",
+      "dishes?"
+    ],
+    "tags": [
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O"
+    ],
+    "id": "train-10"
+  },
+  {
+    "tokens": [
+      "How",
+      "to",
+      "make",
+      "an",
+      "in-n-out",
+      "burger",
+      "at",
+      "home"
+    ],
+    "tags": [
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O"
+    ],
+    "id": "train-11"
+  },
+  {
+    "tokens": [
+      "I",
+      "am",
+      "a",
+      "vegetarian,",
+      "so",
+      "I",
+      "need",
+      "a",
+      "pie",
+      "recipe",
+      "without",
+      "meat."
+    ],
+    "tags": [
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O"
+    ],
+    "id": "train-12"
+  },
+  {
+    "tokens": [
+      "I",
+      "want",
+      "to",
+      "make",
+      "a",
+      "cup",
+      "cake",
+      "and",
+      "I",
+      "am",
+      "allergic",
+      "to",
+      "chocolate."
+    ],
+    "tags": [
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O"
+    ],
+    "id": "train-13"
+  },
+  {
+    "tokens": [
+      "Show",
+      "me",
+      "some",
+      "party",
+      "food",
+      "recipe."
+    ],
+    "tags": [
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O"
+    ],
+    "id": "train-14"
+  },
+  {
+    "tokens": [
+      "Show",
+      "me",
+      "the",
+      "steps",
+      "of",
+      "baking",
+      "a",
+      "strawberry",
+      "chiffon",
+      "cake"
+    ],
+    "tags": [
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O"
+    ],
+    "id": "train-15"
+  },
+  {
+    "tokens": [
+      "Can",
+      "you",
+      "recommend",
+      "some",
+      "dessert",
+      "recipes",
+      "for",
+      "beginer?"
+    ],
+    "tags": [
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O"
+    ],
+    "id": "train-16"
+  },
+  {
+    "tokens": [
+      "I",
+      "want",
+      "to",
+      "make",
+      "something",
+      "sweet"
+    ],
+    "tags": [
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O"
+    ],
+    "id": "train-17"
+  },
+  {
+    "tokens": [
+      "I",
+      "want",
+      "to",
+      "cook",
+      "some",
+      "Mexican",
+      "food"
+    ],
+    "tags": [
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O"
+    ],
+    "id": "train-18"
+  },
+  {
+    "tokens": [
+      "Give",
+      "me",
+      "a",
+      "tutorial",
+      "on",
+      "Gordon",
+      "Ramsey's",
+      "Beef",
+      "Wellington"
+    ],
+    "tags": [
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O"
+    ],
+    "id": "train-19"
+  },
+  {
+    "tokens": [
+      "What",
+      "should",
+      "I",
+      "prepare",
+      "for",
+      "a",
+      "10-person",
+      "dinner"
+    ],
+    "tags": [
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O"
+    ],
+    "id": "train-20"
+  },
+  {
+    "tokens": [
+      "I",
+      "want",
+      "to",
+      "cook",
+      "seafood",
+      "risotto."
+    ],
+    "tags": [
+      "O",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O"
+    ],
+    "id": "train-21"
+  }
+]
